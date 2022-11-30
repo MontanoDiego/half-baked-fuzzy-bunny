@@ -28,8 +28,11 @@ export async function deleteBunny(id) {
 }
 
 export async function createBunny(bunny) {
+    const response = await client
+        .from('fuzzy_bunnies')
+        .insert(bunny);
     // create a bunny using the bunny argument
-    // return checkError(response);
+    return checkError(response);
 }
 
 // MARTHA STEWART (PRE-MADE) FUNCTIONS
