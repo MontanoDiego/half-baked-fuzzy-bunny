@@ -21,8 +21,9 @@ form.addEventListener('submit', async (e) => {
         family_id: familyId
     });
 
-
+    
     form.reset();
+    location.replace('../families');
 });
 
 window.addEventListener('load', async () => {
